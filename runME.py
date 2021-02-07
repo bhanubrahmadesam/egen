@@ -5,6 +5,7 @@ from readfromAPI import readAPI
 import sqlalchemy as sqlyte
 import pandas as pd
 import findspark
+
 findspark.init()
 
 spark = (
@@ -41,18 +42,12 @@ def createcountycovidtable(name):
     covidinfo = Table(
         f"{name}",
         meta,
-        Column(
-            "TEST_DATE",
-            String,
-        ),
+        Column("TEST_DATE", String),
         Column("NEWPOSITIVES", Integer),
         Column("CUMULATIVEPOSITIVES", Integer),
         Column("TOTALNUMBER", Integer),
         Column("CUMULATIVENUMBER", String),
-        Column(
-            "LOAD_DATE",
-            String,
-        ),
+        Column("LOAD_DATE", String),
     )
 
     # CREATE COUNTY TABLE USING THE GLOBAL ENGINE VARIABLE
