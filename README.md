@@ -29,20 +29,34 @@ UNIT TESTING
   a. select few rows just so we can compare it with the API data
   b. get the count of all records for one/two county's
   
+==========E-X-E-C-U-T-I-O-N==========
+
+=============================================================================
+
 SPARK SUBMIT COMMAND, RUN THIS ON A CLUSTER with either YARN/IBM SPECTURM CONDUCTOR as CLUSTER MANAGER 
 
 (I used local as I'm working on a local PC)
 
 C:\spark\spark-3.0.1-bin-hadoop2.7\bin\spark-submit --master local --num-executors 10 --py-files C:\Users\sruth\IdeaProjects\egen\runME.py C:\Users\sruth\IdeaProjects\egen\runME.py
 
-CREATE A ".sh" file like below (ex: scheduleme.sh)
+=============================================================================
+
+create a ".sh" file like below (ex: scheduleme.sh)
 
 #!/bin/bash
+
 echo "Running for:" `date +"%m-%d-%Y"`
+
 C:\spark\spark-3.0.1-bin-hadoop2.7\bin\spark-submit --master local --num-executors 10 --py-files C:\Users\sruth\Desktop\EGEN\testme.py C:\Users\sruth\Desktop\EGEN\testme.py
+
+=============================================================================
 
 RUN THE ABOVE ".sh" USING "crontab -e"
 
 0 9 * * * C:\Users\sruth\Desktop\EGEN\scheduleme.sh >> log.out
 
+=============================================================================
+
 Assumptions: there is only one date/record in the API for each county/day, hence used the same date for both LOADDATE and TESTDATE
+
+
