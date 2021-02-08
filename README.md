@@ -59,4 +59,22 @@ RUN THE ABOVE ".sh" USING "crontab -e"
 
 Assumptions: there is only one date/record in the API for each county/day, hence used the same date for both LOADDATE and TESTDATE
 
+TABLE SCHEMA
+
+=============
+
+TEST_DATE: Test Date
+
+COUNTY: COUNTY (this is not needed, but I still included)
+
+NEWPOSITIVES: New Positives
+
+CUMULATIVEPOSITIVES: Cumulative Number of Positives
+
+TOTALNUMBER: Total Number of Tests Performed
+
+CUMULATIVENUMBER: Cumulative Number of Tests Performed
+
+LOAD_DATE: LOAD_DATE (same as Test Date)
+
 
