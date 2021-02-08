@@ -57,11 +57,15 @@ RUN THE ABOVE ".sh" USING "crontab -e"
 
 ========================================================================
 
-Assumptions: there is only one date/record in the API for each county/day, hence used the same date for both LOADDATE and TESTDATE
+ASSUMPTIONS
+
+===========
+
+There is only one date/record in the API for each county/day, hence used the same date for both LOADDATE and TESTDATE
 
 TABLE SCHEMA
 
-=============
+===========
 
 TEST_DATE: Test Date
 
