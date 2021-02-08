@@ -61,7 +61,7 @@ ASSUMPTIONS
 
 ===========
 
-There is only one date/record in the API for each county/day, hence used the same date for both LOADDATE and TESTDATE
+There is only one date/record in the API for each county/day, hence used the same date for both LOAD_DATE and TEST_DATE
 
 TABLE SCHEMA
 
